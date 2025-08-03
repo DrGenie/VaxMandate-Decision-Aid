@@ -213,8 +213,8 @@ function buildScenarioFromInputs() {
   const currencySymbol = (country === "Australia") ? "A$" : "€";
   const valuePerQALY = 50000;  // 50k in local currency
   // Cost calculations
-  const costPerPerson = 340;  // assume ~340 in local currency per fully vaccinated person (including overhead)
-  const fixedCost = (basePopulation / 100000) * 1000000;  // e.g., $1,000,000 per 100k for initial setup
+  const costPerPerson = 50;  // assume ~50 in local currency per fully vaccinated person (including overhead)
+  const fixedCost = (basePopulation / 100000) * 200000;  // e.g., $200,000 per 100k for initial setup
   const totalInterventionCost = fixedCost + costPerPerson * participants;
   // Monetized benefits and net benefit
   const monetizedBenefits = totalQALY * valuePerQALY;
