@@ -493,7 +493,7 @@ function renderCostsBenefits() {
   const valuePerQALY = 50000;  // local currency
   const monetizedBenefits = totalQALY * valuePerQALY;
 
-  const costPerPerson = 340;
+  const costPerPerson = 50;
   const fixedCost = (basePop / 100000) * 1000000;
   const totalCost = fixedCost + costPerPerson * participants;
   const netBenefitValue = monetizedBenefits - totalCost;
@@ -517,7 +517,7 @@ function renderCostsBenefits() {
     <p><strong>Total Intervention Cost:</strong> ${currencySymbol}${totalCost.toFixed(2)}</p>
     <p><strong>Monetized Benefits:</strong> ${currencySymbol}${monetizedBenefits.toFixed(2)}</p>
     <p><strong>Net Benefit:</strong> ${currencySymbol}${netBenefitValue.toFixed(2)}</p>
-    <p>The above assumes ${scenario.lives_val} lives saved per 100k with the mandate. Costs include a fixed setup cost and ~$340 per person vaccinated. Benefits are valued at ~${currencySymbol}50k per QALY. Net Benefit = Monetized Benefits – Total Cost.</p>
+    <p>The above assumes ${scenario.lives_val} lives saved per 100k with the mandate. Costs include a fixed setup cost and ~$50 per person vaccinated. Benefits are valued at ~${currencySymbol}50k per QALY. Net Benefit = Monetized Benefits – Total Cost.</p>
   `;
   resultDiv.appendChild(summaryDiv);
 
