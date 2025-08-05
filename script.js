@@ -578,7 +578,7 @@ function populateCostBreakdown() {
   const country = scenario.country;
   const currencySymbol = (country === "Australia") ? "A$" : "€";
   const prob = parseFloat(scenario.predictedUptake) / 100;
-  const basePop = 100000;
+  const basePop = 3000;
   const participants = basePop * prob;
   // Define cost components
   const costItems = [
