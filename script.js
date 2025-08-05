@@ -481,10 +481,10 @@ function renderCostsBenefits() {
     cov90Check: scenario.cov90Check,
     lives_val: scenario.lives_val 
   });
-  const basePop = 100000;
+  const basePop = 3000;
   const participants = basePop * prob;
   const uptakePercentage = prob * 100;
-  const livesSavedTotal = (scenario.lives_val / 100000) * (basePop * prob);
+  const livesSavedTotal = (scenario.lives_val / 3000) * (basePop * prob);
 
   const qalyScenario = document.getElementById("qalySelect").value;
   const QALY_SCENARIO_VALUES = { low: 5, moderate: 10, high: 20 };
@@ -494,7 +494,7 @@ function renderCostsBenefits() {
   const monetizedBenefits = totalQALY * valuePerQALY;
 
   const costPerPerson = 50;
-  const fixedCost = (basePop / 100000) * 1000000;
+  const fixedCost = (basePop / 3000) * 30000;
   const totalCost = fixedCost + costPerPerson * participants;
   const netBenefitValue = monetizedBenefits - totalCost;
 
