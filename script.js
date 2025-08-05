@@ -200,10 +200,10 @@ function buildScenarioFromInputs() {
   const uptakePercent = prob * 100;
 
   // Compute net benefit (cost–benefit calculation)
-  const basePopulation = 100000;  // population base for analysis (per 100k)
+  const basePopulation = 3000;  // population base for analysis (per 100k)
   const participants = basePopulation * prob;  // number of people complying (out of 100k)
   // Lives saved adjusted by uptake (assuming proportional to compliance)
-  const livesSavedTotal = (lives_val / 100000) * (basePopulation * prob);
+  const livesSavedTotal = (lives_val / 3000) * (basePopulation * prob);
   // QALY gains per life based on selection
   const QALY_VALUES = { low: 5, moderate: 10, high: 20 };
   const qalyScenario = document.getElementById("qalySelect") ? document.getElementById("qalySelect").value : "moderate";
@@ -214,7 +214,7 @@ function buildScenarioFromInputs() {
   const valuePerQALY = 50000;  // 50k in local currency
   // Cost calculations
   const costPerPerson = 50;  // assume ~50 in local currency per fully vaccinated person (including overhead)
-  const fixedCost = (basePopulation / 100000) * 200000;  // e.g., $200,000 per 100k for initial setup
+  const fixedCost = (basePopulation / 3000) * 200000;  // e.g., $200,000 per 100k for initial setup
   const totalInterventionCost = fixedCost + costPerPerson * participants;
   // Monetized benefits and net benefit
   const monetizedBenefits = totalQALY * valuePerQALY;
